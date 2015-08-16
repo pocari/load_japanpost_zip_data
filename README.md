@@ -16,8 +16,8 @@ bundle install
 - データベース構築
 
 ```
-cd db
-bash rebuild_db.sh
+$ cd db
+$ bash rebuild_db.sh
 ```
 
 ##実行
@@ -25,12 +25,22 @@ bash rebuild_db.sh
 [郵政省の郵便番号データダウンロードページ](http://www.post.japanpost.jp/zipcode/dl/oogaki-zip.html)から全国分をダウンロードして展開
 
 ```
-wget http://www.post.japanpost.jp/zipcode/dl/oogaki/zip/ken_all.zip
-unzip ken_all.zip
+$ cd ${project_root}
+$ wget http://www.post.japanpost.jp/zipcode/dl/oogaki/zip/ken_all.zip
+$ unzip ken_all.zip
 ```
 
 ###データロード
 
 ```
-bundle exec ruby load_zip_code.rb
+$ bundle exec ruby load_zip_code.rb
 ```
+
+##確認
+
+```
+$ echo 'select count(*) from mst_zip' | mysql -hlocalhost -uzip_user -p'-zip_user-' zip
+# => count(*)
+# => 123719
+```
+
