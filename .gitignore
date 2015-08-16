@@ -1,0 +1,12 @@
+*~
+*.swp
+*.swo
+*.CSV
+*.csv
+vendor/**/*
+
+# Emacs backup files
+.DS_Store
+*~
+*#
+.#*
