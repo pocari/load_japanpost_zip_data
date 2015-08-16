@@ -14,8 +14,8 @@ function getenv() {
 
 export MYSQL_HOST=`getenv "$KPI_MYSQL_HOST" localhost`
 export MYSQL_PORT=`getenv "$KPI_MYSQL_PORT" 3306`
-export MYSQL_USER=`getenv "$KPI_MYSQL_USER" yn_test_user`
-export MYSQL_PASSWD=`getenv "$KPI_MYSQL_PASSWD" -yn_test_user-`
+export MYSQL_USER=`getenv "$KPI_MYSQL_USER" zip_user`
+export MYSQL_PASSWD=`getenv "$KPI_MYSQL_PASSWD" -zip_user-`
 export MYSQL_ROOTPASSWD=`getenv "$KPI_MYSQL_ROOTPASSWD" -root-`
 export MYSQL_DBNAME=`getenv "$KPI_MYSQL_DBNAME" "$KPI_MYSQL_DBNAME_DEFAULT"`
 export MYSQL_OPTION=(--local-infile --init-command="set foreign_key_checks=0" `getenv "$KPI_MYSQL_OPTION" ""`)

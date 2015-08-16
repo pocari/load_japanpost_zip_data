@@ -1,5 +1,5 @@
 #/bin/bash
-export KPI_MYSQL_DBNAME_DEFAULT="yn_test"
+export KPI_MYSQL_DBNAME_DEFAULT="zip"
 source ./rebuild_common.sh
 
 # DROP DATABASE する

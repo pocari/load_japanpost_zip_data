@@ -4,6 +4,7 @@
 *.CSV
 *.csv
 vendor/**/*
+*.zip
 
 # Emacs backup files
 .DS_Store
