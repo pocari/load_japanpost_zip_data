@@ -32,5 +32,5 @@ unzip ken_all.zip
 ###データロード
 
 ```
-bundle exec ruby load_zip_code.rb
+bundle exec ruby load_zip_csv.rb
 ```

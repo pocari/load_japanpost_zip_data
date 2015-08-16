@@ -3,9 +3,9 @@ require 'active_record'
 ActiveRecord::Base.establish_connection(
   adapter:  'mysql2',
   host:     'localhost',
-  username: 'yn_test_user',
-  password: '-yn_test_user-',
-  database: 'yn_test'
+  username: 'zip_user',
+  password: '-zip_user-',
+  database: 'zip'
 )
 
 module ActiveRecord
