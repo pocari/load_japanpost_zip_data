@@ -10,7 +10,7 @@
 - 依存ライブラリ
 
 ```
-bundle install
+$ bundle install
 ```
 
 - データベース構築
