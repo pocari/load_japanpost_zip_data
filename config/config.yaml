@@ -1,0 +1,7 @@
+db:
+  development:
+    adapter:  mysql2
+    host:     localhost
+    username: zip_user
+    password: -zip_user-
+    database: zip
