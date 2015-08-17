@@ -55,7 +55,6 @@ class JapanPostZipDataLoader
       if prev
         if e.zip_code == prev.zip_code
           if paren_num != 0 #前のレコードの括弧の対応がとれていない場合
-            current_paren = included_parentheses(e.choiki)
             #町域を連結する
             e.choiki      = prev.choiki + e.choiki
             #カナについては異なる値の場合連結する（京都の住所などで、町域カナは同じ値で、町域のみ連結するケースがあるため)
