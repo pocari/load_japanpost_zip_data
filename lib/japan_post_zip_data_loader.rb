@@ -73,12 +73,5 @@ class JapanPostZipDataLoader
     end
     yield prev if prev
   end
-
-  def load_zip_csv
-    CsvRecord.truncate
-    merge_duplicate_zip_code do |rec|
-      rec.save!
-    end
-  end
 end
 
