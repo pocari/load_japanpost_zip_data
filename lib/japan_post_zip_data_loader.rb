@@ -39,9 +39,9 @@ class JapanPostZipDataLoader
   def included_parentheses(e)
     paren_num = 0
     e.each_char do |c|
-      if c == '('
+      if c == '（'
         paren_num += 1
-      elsif c == ')'
+      elsif c == '）'
         paren_num -= 1
       end
     end
@@ -55,10 +55,11 @@ class JapanPostZipDataLoader
       if prev
         if e.zip_code == prev.zip_code
           if paren_num != 0 #前のレコードの括弧の対応がとれていない場合
-            current_paren = included_parentheses(e.choiki_kana)
+            current_paren = included_parentheses(e.choiki)
             #町域を連結する
-            e.choiki_kana = prev.choiki_kana + e.choiki_kana
             e.choiki      = prev.choiki + e.choiki
+            #カナについては異なる値の場合連結する（京都の住所などで、町域カナは同じ値で、町域のみ連結するケースがあるため)
+            e.choiki_kana = prev.choiki_kana + e.choiki_kana unless prev.choiki_kana == e.choiki_kana
           else
             #前のレコードに開き,閉じ括弧のみのデータが無ければ、独立したレコードとみなして前レコードを返す
             yield prev
@@ -69,7 +70,7 @@ class JapanPostZipDataLoader
         end
       end
       prev = e
-      paren_num = included_parentheses(e.choiki_kana)
+      paren_num = included_parentheses(e.choiki)
     end
     yield prev if prev
   end
