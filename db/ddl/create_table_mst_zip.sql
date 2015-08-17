@@ -19,3 +19,7 @@ CREATE TABLE mst_zip (
   primary key (id)
 );
 
+create index i01_mst_zip on mst_zip (
+  zip_code
+);
+
