@@ -22,7 +22,7 @@ class TransactionHelper
       end
     end
   end
-  
+
   def with_rollback_transaction
     with_transaction do
       begin
