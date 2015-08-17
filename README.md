@@ -13,7 +13,7 @@
 $ bundle install
 ```
 
-##テスト
+- テスト
 
 ```
 $ bundle exec rspec spec/**/*_spec.rb
