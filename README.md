@@ -13,6 +13,12 @@
 $ bundle install
 ```
 
+##テスト
+
+```
+$ bundle exec rspec spec/**/*_spec.rb
+```
+
 - データベース構築
 
 ```
@@ -33,7 +39,7 @@ $ unzip ken_all.zip
 ###データロード
 
 ```
-$ bundle exec ruby load_zip_csv.rb
+$ bundle exec ruby load_csv.rb
 ```
 
 ##確認
