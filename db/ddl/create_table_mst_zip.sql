@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS tmp_mst_zip;
 CREATE TABLE mst_zip (
   id                      int          NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  code                    varchar(5)                           COMMENT '全国地方公共団体コード',
+  code                    varchar(5)                           COMMENT '全国地方公共団体コード', -- 都道府県＋市区町村単位を一意に特定するコード
   old_zip_code            varchar(5)                           COMMENT '旧郵便番号',
   zip_code                varchar(7)                           COMMENT '郵便番号',
   todofuken_kana          varchar(7)                           COMMENT '都道府県名カナ',
