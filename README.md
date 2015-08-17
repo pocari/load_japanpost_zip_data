@@ -28,11 +28,11 @@ $ bash rebuild_db.sh
 
 ##実行
 ### データ取得
-[郵政省の郵便番号データダウンロードページ](http://www.post.japanpost.jp/zipcode/dl/oogaki-zip.html)から全国分をダウンロードして展開
+[郵政省の郵便番号データダウンロードページ](http://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html)から全国分をダウンロードして展開(ここでは促音・拗音小書きの方）
 
 ```
 $ cd ${project_root}
-$ wget http://www.post.japanpost.jp/zipcode/dl/oogaki/zip/ken_all.zip
+$ wget http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip
 $ unzip ken_all.zip
 ```
 
