@@ -13,17 +13,17 @@
 $ bundle install
 ```
 
-- テスト
-
-```
-$ bundle exec rspec spec/**/*_spec.rb
-```
-
 - データベース構築
 
 ```
 $ cd db
 $ bash rebuild_db.sh
+```
+
+- テスト
+
+```
+$ bundle exec rspec spec/**/*_spec.rb
 ```
 
 ##実行
