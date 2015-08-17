@@ -1,12 +1,5 @@
 require 'active_record'
-
-DATABASE_CONFIG = {
-  adapter:  'mysql2',
-  host:     'localhost',
-  username: 'zip_user',
-  password: '-zip_user-',
-  database: 'zip'
-}
+require 'activerecord-import'
 
 module ActiveRecord
   class Base

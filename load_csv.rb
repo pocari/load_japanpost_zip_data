@@ -9,8 +9,15 @@ def main
   tm = TransactionHelper.new(ConfigHelper[:db, :development])
   tm.with_transaction do
     MstZip.delete_all
+    records = []
     loader.merge_duplicate_zip_code do |row|
-      MstZip.new(row.to_h).save!
+      records << MstZip.new(row.to_h)
+    end
+    count = 0;
+    records.each_slice(1000) do |slice|
+      MstZip.import slice
+      count += slice.size
+      $stderr.puts "#{count} inserted."
     end
   end
 end
