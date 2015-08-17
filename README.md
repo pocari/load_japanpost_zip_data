@@ -23,6 +23,7 @@ $ bash rebuild_db.sh
 - テスト
 
 ```
+$ cd ${project_root}
 $ bundle exec rspec spec/**/*_spec.rb
 ```
 
