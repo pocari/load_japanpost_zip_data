@@ -52,7 +52,7 @@ $ echo 'select count(*) from mst_zip' | mysql -hlocalhost -uzip_user -p'-zip_use
 
 - 参考
 
-```sql:
+```SQL
 -- 要確認住所
 select
   * 
