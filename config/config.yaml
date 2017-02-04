@@ -1,7 +1,14 @@
 db:
+# mysql
+#  development:
+#    adapter:  mysql2
+#    host:     localhost
+#    username: zip_user
+#    password: -zip_user-
+#    database: zip
+# sqlite3
   development:
-    adapter:  mysql2
-    host:     localhost
-    username: zip_user
-    password: -zip_user-
-    database: zip
+    adapter:  sqlite3
+    database: /path/to/file
+    pool: 5
+    timeout: 5000

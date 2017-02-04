@@ -30,7 +30,7 @@ module ZipCsvUtil
   end
 
   def each_zip_files(dir, pattern="*")
-    Dir.glob("#{dir}/**/#{pattern}.csv", File::FNM_CASEFOLD) do |csv|
+    Dir.glob("#{dir}/#{pattern}.csv", File::FNM_CASEFOLD) do |csv|
       yield csv
     end
   end
