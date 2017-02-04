@@ -1,3 +1,4 @@
+require 'pry-byebug'
 require_relative 'lib/japan_post_zip_data_loader'
 require_relative 'lib/active_record_util'
 require_relative 'lib/config_helper'
